@@ -1,0 +1,43 @@
+MÓDULOS DA COLÔNIA AURORA SIGER
+================================
+
+Tabela de Atributos dos Módulos
+
+Módulo                    | Consumo (kW) | Prioridade | Capacidade (u) | Comunicação | Status
+--------------------------|--------------|------------|----------------|------------|--------
+Habitação                 | 18.0         | 9          | 22             | Alta       | Ativo
+Centro de Controle        | 15.5         | 10         | 18             | Muito Alta | Ativo
+Armazenamento de Energia  | 12.0         | 8          | 40             | Média      | Ativo
+Agricultura               | 17.0         | 7          | 28             | Média      | Ativo
+Laboratório Científico    | 13.5         | 6          | 20             | Alta       | Ativo
+Comunicação               | 10.0         | 8          | 15             | Muito Alta | Ativo
+Suporte Médico            | 14.0         | 9          | 18             | Alta       | Ativo
+Produção de Oxigênio      | 20.0         | 10         | 30             | Alta       | Ativo
+
+EXPLICAÇÃO DOS ATRIBUTOS
+=========================
+
+Consumo (kW):
+  Quantidade de energia necessária para o funcionamento do módulo.
+  Unidade: quilowatts (kW)
+
+Prioridade:
+  Nível de importância do módulo para a sobrevivência da colônia.
+  Escala: 1 (baixa) a 10 (crítica)
+  Módulos com prioridade 9-10 são essenciais à vida e operação.
+
+Capacidade (u):
+  Quantidade de recursos ou energia que o módulo consegue armazenar ou processar.
+  Unidade: unidades arbitrárias (u)
+
+Comunicação:
+  Frequência e intensidade de troca de informações entre módulos.
+  Níveis: Baixa, Média, Alta, Muito Alta
+
+Status Operacional:
+  Estado atual do módulo.
+  Possíveis valores: Ativo, Manutenção, Alerta, Falha
+
+CONSUMO TOTAL: 120.0 kW
+CAPACIDADE TOTAL: 191 u
+MÓDULOS CRÍTICOS (Prioridade >= 9): 4 (Habitação, Centro de Controle, Suporte Médico, Produção de Oxigênio)

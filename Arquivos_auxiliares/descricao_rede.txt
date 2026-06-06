@@ -1,0 +1,125 @@
+DESCRIÇÃO DA REDE DA COLÔNIA AURORA SIGER
+==========================================
+
+TOPOLOGIA GERAL
+===============
+A rede da colônia Aurora Siger é projetada com um padrão em estrela-misto, onde o Centro de Controle
+é um ponto central que se conecta a múltiplos módulos, garantindo redundância parcial através de
+rotas alternativas.
+
+CONEXÕES E PESOS (Ordem crescente de peso/custo)
+=================================================
+
+Conexão                                          | Peso | Tipo de Comunicação
+------------------------------------------------|-----|-----------------------
+Centro de Controle <-> Comunicação               | 3.0 | Comando direto
+Armazenamento de Energia <-> Produção de Oxigênio| 5.0 | Distribuição de energia
+Centro de Controle <-> Armazenamento de Energia  | 4.0 | Monitoramento energético
+Agricultura <-> Laboratório Científico           | 5.5 | Dados agrícolas/científicos
+Comunicação <-> Suporte Médico                   | 4.5 | Alertas de saúde
+Centro de Controle <-> Habitação                 | 6.0 | Status de operação
+Comunicação <-> Laboratório Científico           | 6.0 | Transmissão de dados
+Habitação <-> Armazenamento de Energia           | 8.0 | Consumo de energia
+Armazenamento de Energia <-> Agricultura         | 7.0 | Energia para sistemas de cultivo
+Suporte Médico <-> Produção de Oxigênio          | 6.5 | Suplementação de O2
+
+TOTAL DE ARESTAS: 10
+PESO MÍNIMO: 3.0 (Centro de Controle - Comunicação)
+PESO MÁXIMO: 8.0 (Habitação - Armazenamento de Energia)
+PESO MÉDIO: 5.75
+
+IMPORTÂNCIA ESTRATÉGICA DAS CONEXÕES
+=====================================
+
+1. CRÍTICAS (Peso 3.0-4.5):
+   - Centro de Controle <-> Comunicação (3.0): backbone da colônia
+   - Centro de Controle <-> Armazenamento (4.0): monitoramento essencial
+   - Comunicação <-> Suporte Médico (4.5): alertas de emergência
+
+2. MODERADAS (Peso 5.0-5.5):
+   - Energia <-> Produção de Oxigênio (5.0): vida principal
+   - Agricultura <-> Laboratório (5.5): suporte científico
+
+3. PERIFÉRICAS (Peso 6.0-8.0):
+   - Comunicação <-> Laboratório (6.0): transmissão de dados
+   - Centro de Controle <-> Habitação (6.0): controle operacional
+   - Suporte Médico <-> Produção O2 (6.5): suplementação de ar
+   - Armazenamento <-> Agricultura (7.0): energia para cultivos
+   - Habitação <-> Armazenamento (8.0): consumo residencial
+
+PADRÕES DE FLUXO
+================
+
+Fluxo Energético Principal:
+  Armazenamento de Energia -> Centro de Controle -> [Todos os módulos]
+
+Fluxo de Comunicação:
+  Qualquer módulo <-> Comunicação <-> Centro de Controle <-> [Todos]
+
+Fluxo de Dados Científicos:
+  Agricultura <-> Laboratório Científico <-> Comunicação
+
+Suporte de Emergência:
+  Produção de Oxigênio -> Suporte Médico -> Comunicação (alerta)
+
+CARACTERÍSTICAS DA REDE
+=======================
+
+Conectividade: Todos os 8 módulos estão conectados (rede conexa)
+Redundância: Parcial - alguns módulos têm caminhos alternativos
+Latência: Distâncias curtas (pesos 3-8) indicam sistema responsivo
+Escalabilidade: Estrutura permite adição de módulos via Centro de Controle
+
+Módulos com Múltiplas Conexões:
+  - Centro de Controle: 3 conexões diretas
+  - Armazenamento de Energia: 3 conexões diretas
+  - Comunicação: 3 conexões diretas
+  - Produção de Oxigênio: 2 conexões diretas
+
+Módulos com Conexões Limitadas:
+  - Habitação: 2 conexões (potencial ponto de falha)
+  - Laboratório Científico: 2 conexões (semi-isolado)
+  - Agricultura: 1 conexão direta (depende de rotas)
+  - Suporte Médico: 2 conexões (crítico em emergências)
+
+CAMINHOS MÍNIMOS NOTÁVEIS
+==========================
+
+Armazenamento de Energia para Suporte Médico:
+  Rota 1: Energia -> Centro de Controle -> Comunicação -> Suporte Médico (Custo: 13.5)
+  Rota 2: Energia -> Produção de Oxigênio -> Suporte Médico (Custo: 11.5) [Mais eficiente]
+
+Habitação para Produção de Oxigênio:
+  Rota: Habitação -> Centro de Controle -> Armazenamento -> Produção O2 (Custo: 13.0)
+
+Centro de Controle para Agricultura:
+  Rota: Centro de Controle -> Armazenamento -> Agricultura (Custo: 11.0)
+
+ANÁLISE DE VULNERABILIDADE
+===========================
+
+Pontos de Falha Única (Single Points of Failure):
+  - Centro de Controle: Se falhar, isola comunicação com alguns módulos
+  - Armazenamento de Energia: Se falhar, impacto direto em distribuição
+
+Módulos Expostos:
+  - Agricultura: Depende de rota através de Armazenamento
+  - Habitação: Conectado apenas a 2 módulos
+
+Recomendações:
+  - Adicionar conexão redundante entre Habitação e Comunicação
+  - Considerar conexão direta Agricultura-Comunicação para independência
+  - Manter monitoramento ativo de Centro de Controle e Armazenamento
+
+CRESCIMENTO FUTURO
+===================
+
+Proposta de Expansão:
+  - Fase 1: Adicionar conexão Habitação-Comunicação (peso ~5.0)
+  - Fase 2: Adicionar Módulo de Manufatura conectado a Laboratório
+  - Fase 3: Adicionar camada redundante no Armazenamento de Energia
+
+Impacto Estimado:
+  - Melhoria de resiliência em 25%
+  - Redução de latência média em 10%
+  - Aumento de carga em Centro de Controle (~5% acumulado)

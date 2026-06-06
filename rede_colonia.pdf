@@ -9,20 +9,106 @@ endobj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 4 0 R /Resources << /Font << /F1 5 0 R >> >> >>
 endobj
 4 0 obj
-<< /Length 396 >>
+<< /Length 1988 >>
 stream
 BT
-/F1 12 Tf
+/F1 11 Tf
 50 750 Td
-(Diagrama da rede da colônia Aurora Siger) Tj
+(DIAGRAMA DA REDE - COLONIA AURORA SIGER) Tj
 T*
-(Nó central: Centro de Controle conectado a Habitação, Armazenamento de Energia e Comunicação.) Tj
+() Tj
 T*
-(Armazenamento de Energia conecta Agricultura e Produção de Oxigênio.) Tj
+(TOPOLOGIA EM ESTRELA-MISTA) Tj
 T*
-(Comunicação conecta Laboratório Científico e Suporte Médico.) Tj
+(Centro de Controle e Armazenamento sao hubs centrais) Tj
 T*
-(Rede planejada para rotas curtas e redundância em módulos críticos.) Tj
+() Tj
+T*
+(Estrutura Basica:) Tj
+T*
+(               Laboratorio) Tj
+T*
+(                   |) Tj
+T*
+(   Habitacao - Centro Ctrl - Comunicacao - Suporte Medico) Tj
+T*
+(       |        |                  |) Tj
+T*
+(       +---Armazenagem---------+) Tj
+T*
+(               |        |) Tj
+T*
+(           Agricultura  Oxigenio) Tj
+T*
+(               |        |) Tj
+T*
+(               +--------+) Tj
+T*
+() Tj
+T*
+(CONEXOES PRINCIPAIS) Tj
+T*
+(1. Centro <-> Comunicacao \(3.0\): backbone) Tj
+T*
+(2. Centro <-> Armazenagem \(4.0\): energia) Tj
+T*
+(3. Comunicacao <-> Medico \(4.5\): saude) Tj
+T*
+(4. Energia <-> Oxigenio \(5.0\): vida) Tj
+T*
+(5. Agricultura <-> Laboratorio \(5.5\): ciencia) Tj
+T*
+(6. Comunicacao <-> Laboratorio \(6.0\): dados) Tj
+T*
+(7. Centro <-> Habitacao \(6.0\): controle) Tj
+T*
+(8. Medico <-> Oxigenio \(6.5\): suplementacao) Tj
+T*
+(9. Armazenagem <-> Agricultura \(7.0\): energia) Tj
+T*
+(10. Habitacao <-> Armazenagem \(8.0\): consumo) Tj
+T*
+() Tj
+T*
+(FLUXOS DE ENERGIA) Tj
+T*
+(Principal: Armazenagem -> Centro -> [todos]) Tj
+T*
+(Emergencia: Oxigenio -> Medico -> Comunicacao) Tj
+T*
+(Critica: Armazenagem <-> Energia Renovavel \(futuro\)) Tj
+T*
+() Tj
+T*
+(MODULOS CRITICOS \(Prioridade 9-10\)) Tj
+T*
+(- Centro de Controle \(operacao central\)) Tj
+T*
+(- Habitacao \(sobrevivencia\)) Tj
+T*
+(- Suporte Medico \(saude\)) Tj
+T*
+(- Producao de Oxigenio \(vida\)) Tj
+T*
+() Tj
+T*
+(PONTOS DE FALHA POTENCIAL) Tj
+T*
+(- Centro de Controle: 3 arestas - isolaria alguns modulos) Tj
+T*
+(- Armazenagem: 3 arestas - impacto energetico) Tj
+T*
+(- Habitacao: 2 arestas - semi-isolado) Tj
+T*
+() Tj
+T*
+(RECOMENDACAO DE EXPANSAO) Tj
+T*
+(- Adicionar Habitacao <-> Comunicacao \(melhorar redundancia\)) Tj
+T*
+(- Adicionar camada redundante em energia \(fase 2\)) Tj
+T*
+(- Monitoramento continuo de centros de controle) Tj
 ET
 endstream
 endobj
@@ -36,9 +122,9 @@ xref
 0000000058 00000 n 
 0000000115 00000 n 
 0000000241 00000 n 
-0000000687 00000 n 
+0000002280 00000 n 
 trailer
 << /Size 6 /Root 1 0 R >>
 startxref
-886
+2479
 %%EOF
