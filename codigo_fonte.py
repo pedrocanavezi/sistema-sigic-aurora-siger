@@ -1,4 +1,4 @@
-﻿"""SIGIC - Sistema Inteligente de Gerenciamento da Infraestrutura da Colônia Aurora Siger"""
+﻿"""SIGIC - Simulação da rede de módulos da colônia Aurora Siger"""
 
 # Lista de módulos da colônia
 modulos = [
@@ -195,9 +195,9 @@ def dijkstra(inicio, destino):
 
 def calcular_perda_energetica(distancia, consumo_destino, taxa_perda=0.02):
     # perda = distancia * consumo_destino * taxa_perda
-    # distancia: distância física entre módulos (ou peso da conexão)
+    # distancia: peso da conexão entre módulos
     # consumo_destino: consumo energético do módulo de destino em kW
-    # taxa_perda: percentual de perda de energia por unidade de distância
+    # taxa_perda: taxa fixa de perda por unidade de distância
     return distancia * consumo_destino * taxa_perda
 
 
@@ -368,5 +368,5 @@ def menu():
 
 
 if __name__ == '__main__':
-    print('Bem-vindo ao SIGIC - Sistema Inteligente de Gerenciamento da Infraestrutura da Colônia Aurora Siger')
+    print('SIGIC - Simulação da rede de módulos da colônia Aurora Siger')
     menu()
